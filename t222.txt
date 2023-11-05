@@ -1,0 +1,33 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("ENTER MARKS FOR 5 SUBJECTS");
+        int marks[]=new int[6];
+        float total=0;
+        Scanner sc=new Scanner(System.in);
+        for(int i=0;i<6;i++){
+          marks[i]=sc.nextInt();
+          total=total+marks[i];
+        }
+        float average=total/100;
+        System.out.println("AVERAGE OF FIVE SUBJECTS IS"+average);
+        if(average<=100 && average>90){
+            System.out.println("GRADE A");
+        }
+        else if(average<=90 && average>80){
+            System.out.println("GRADE B");
+        }
+        else if(average<=80 && average>70){
+            System.out.println("GRADE C");
+        }
+        else if(average<=70 && average>60){
+            System.out.println("GRADE D");
+        }
+        else if(average<=60 && average>50){
+          System.out.println("GRADE E");
+        }
+        else{
+           System.out.println("FAIL");  
+        }
+    }
+}
